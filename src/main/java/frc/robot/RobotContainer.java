@@ -27,7 +27,7 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    m_chassis = new ThreeMotorChassis();
+    m_chassis = new Chassis();
     m_driveController = new XboxController(Constants.DRIVEJS);
     // Configure the button bindings
     configureButtonBindings();

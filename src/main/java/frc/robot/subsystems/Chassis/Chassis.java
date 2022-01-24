@@ -26,14 +26,14 @@ public class Chassis extends SubsystemBase {
         rightLeader = new TalonFX(Constants.RLEADER);
 
         // Set inverted
-        leftLeader.setInverted(Constants.LEFT_INVERTED);
+        leftLeader.setInverted(!Constants.LEFT_INVERTED);
 
-        rightLeader.setInverted(!Constants.LEFT_INVERTED);
+        rightLeader.setInverted(Constants.LEFT_INVERTED);
   }
 
   public void setSpeed(double lSpeed, double rSpeed) {
-        leftLeader.set(ControlMode.PercentOutput, lSpeed);
-        rightLeader.set(ControlMode.PercentOutput, rSpeed);
+        leftLeader.set(ControlMode.PercentOutput, lSpeed*0.2);
+        rightLeader.set(ControlMode.PercentOutput, rSpeed*0.2);
   }
 
   @Override
